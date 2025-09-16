@@ -12,7 +12,7 @@ source:
   sha256: a252d516f942ea99fb8cb41bc799c1e0c96de6a9473d8d3950c2ad0d4335ded3
 
 build:
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -23,26 +23,28 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}              # [not win]
-    - {{ stdlib('c') }}                # [not win]
-    - {{ compiler('m2w64_c') }}        # [win]
-    - {{ stdlib('m2w64_c') }}          # [win]
-    - {{ compiler('cxx') }}            # [not win]
-    - {{ compiler('m2w64_cxx') }}      # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
+    - {{ compiler('c') }}          # [not win]
+    - {{ stdlib('c') }}            # [not win]
+    - {{ compiler('m2w64_c') }}    # [win]
+    - {{ stdlib('m2w64_c') }}      # [win]
+    - {{ compiler('cxx') }}        # [not win]
+    - {{ compiler('m2w64_cxx') }}  # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
-    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
+    - llvm-openmp                  # [osx]
   host:
     - r-base
     - r-rcpp
-    - libgomp      # [not osx]
-    - llvm-openmp  # [osx]
+    - libgomp                      # [not osx]
+    - llvm-openmp                  # [osx]
   run:
     - r-base
     - r-rcpp
+    - llvm-openmp                  # [osx]
 
 test:
   commands:
@@ -50,7 +52,8 @@ test:
     - "\"%R%\" -e \"library('quitefastmst')\""  # [win]
 
 about:
-  home: https://quitefastmst.gagolewski.com/, https://github.com/gagolews/quitefastmst
+  home: https://quitefastmst.gagolewski.com/
+  dev_url: https://github.com/gagolews/quitefastmst
   license: AGPL-3.0-only
   summary: Functions to compute Euclidean minimum spanning trees using single-, sesqui-, and
     dual-tree Boruvka algorithms.  Thanks to K-d trees, they are fast in spaces of low
