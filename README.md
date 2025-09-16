@@ -7,20 +7,24 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-quitefastmst-
 About r-quitefastmst
 --------------------
 
-Home: https://quitefastmst.gagolewski.com/, https://github.com/gagolews/quitefastmst
+Home: https://quitefastmst.gagolewski.com/
 
 Package license: AGPL-3.0-only
 
 Summary: Functions to compute Euclidean minimum spanning trees using single-, sesqui-, and dual-tree Boruvka algorithms.  Thanks to K-d trees, they are fast in spaces of low intrinsic dimensionality.  Mutual reachability distances (used in the definition of the 'HDBSCAN*' algorithm) are also supported.  The package also features relatively fast fallback minimum spanning tree and nearest-neighbours algorithms for spaces of higher dimensionality.  The 'Python' version of 'quitefastmst' is available via 'PyPI'.
+
+Development: https://github.com/gagolews/quitefastmst
 
 About r-quitefastmst
 --------------------
 
-Home: https://quitefastmst.gagolewski.com/, https://github.com/gagolews/quitefastmst
+Home: https://quitefastmst.gagolewski.com/
 
 Package license: AGPL-3.0-only
 
 Summary: Functions to compute Euclidean minimum spanning trees using single-, sesqui-, and dual-tree Boruvka algorithms.  Thanks to K-d trees, they are fast in spaces of low intrinsic dimensionality.  Mutual reachability distances (used in the definition of the 'HDBSCAN*' algorithm) are also supported.  The package also features relatively fast fallback minimum spanning tree and nearest-neighbours algorithms for spaces of higher dimensionality.  The 'Python' version of 'quitefastmst' is available via 'PyPI'.
+
+Development: https://github.com/gagolews/quitefastmst
 
 Current build status
 ====================
