@@ -1,4 +1,4 @@
-{% set version = '0.9.0' %}
+{% set version = "0.9.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/quitefastmst_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/quitefastmst/quitefastmst_{{ version }}.tar.gz
-  sha256: a252d516f942ea99fb8cb41bc799c1e0c96de6a9473d8d3950c2ad0d4335ded3
+  sha256: 16052f176182284afb39f80cd729d8abbf5c2f58ae473b7538d8855d0b4d08b1
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -55,13 +55,8 @@ about:
   home: https://quitefastmst.gagolewski.com/
   dev_url: https://github.com/gagolews/quitefastmst
   license: AGPL-3.0-only
-  summary: Functions to compute Euclidean minimum spanning trees using single-, sesqui-, and
-    dual-tree Boruvka algorithms.  Thanks to K-d trees, they are fast in spaces of low
-    intrinsic dimensionality.  Mutual reachability distances (used in the definition
-    of the 'HDBSCAN*' algorithm) are also supported.  The package also features relatively
-    fast fallback minimum spanning tree and nearest-neighbours algorithms for spaces
-    of higher dimensionality.  The 'Python' version of 'quitefastmst' is available via
-    'PyPI'.
+  summary: Functions to compute Euclidean minimum spanning trees using single-, sesqui-, and dual-tree Boruvka algorithms.  Thanks to K-d trees, they are fast in spaces of low intrinsic dimensionality.  Mutual reachability distances (used in the definition of the 'HDBSCAN*' algorithm) are also supported.  The package 
+    also features relatively fast fallback minimum spanning tree and nearest-neighbours algorithms for spaces of higher dimensionality.  The 'Python' version of 'quitefastmst' is available via 'PyPI'.
   license_family: AGPL
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/AGPL-3'
