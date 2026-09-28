@@ -1,4 +1,4 @@
-{% set version = "0.9.1" %}
+{% set version = "0.9.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/quitefastmst_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/quitefastmst/quitefastmst_{{ version }}.tar.gz
-  sha256: 16052f176182284afb39f80cd729d8abbf5c2f58ae473b7538d8855d0b4d08b1
+  sha256: fd1fe6bb60f04a2ac21a0d895fc5546cb8bb4d053ba33c97d2dbace536ea079f
 
 build:
   number: 0
